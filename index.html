@@ -151,7 +151,7 @@
         <li><a href="#weather" data-i18n="nav.weather">气象模式</a></li>
         <li><a href="#tech" data-i18n="nav.tech">技术架构</a></li>
         <li><a href="#download" data-i18n="nav.download">下载</a></li>
-        <li><a href="https://cupgis.cn" target="_blank" rel="noopener" data-i18n="nav.docs">文档</a></li>
+        <li><a href="docs/Neptune_功能说明文档.pdf" class="doc-link" data-i18n="nav.docs">文档</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -193,7 +193,7 @@
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             <span data-i18n="hero.btnDownload">免费下载</span>
           </a>
-          <a href="https://cupgis.cn" target="_blank" rel="noopener" class="btn btn-ghost">
+          <a href="docs/Neptune_功能说明文档.pdf" class="btn btn-ghost doc-link">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
             <span data-i18n="hero.btnDocs">查看文档</span>
           </a>
@@ -592,8 +592,8 @@
         <div class="footer-col">
           <h4 data-i18n="footer.col2">资源</h4>
           <ul>
-            <li><a href="https://cupgis.cn" target="_blank" rel="noopener" data-i18n="footer.link.docs">使用文档</a></li>
-            <li><a href="https://cupgis.cn" target="_blank" rel="noopener" data-i18n="footer.link.dev">开发指南</a></li>
+            <li><a href="docs/Neptune_功能说明文档.pdf" class="doc-link" data-i18n="footer.link.docs">使用文档</a></li>
+            <li><a href="docs/Neptune_功能说明文档.pdf" class="doc-link" data-i18n="footer.link.dev">开发指南</a></li>
             <li><a href="#weather" data-i18n="footer.link.weather">气象模式</a></li>
             <li><a href="#tech" data-i18n="footer.link.tech">技术架构</a></li>
           </ul>
@@ -612,6 +612,36 @@
       </div>
     </div>
   </footer>
+
+  <!-- ============================================================
+       PDF 文档在线预览模态框
+       ============================================================ -->
+  <div class="pdf-modal" id="pdfModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="PDF 文档预览">
+    <div class="pdf-modal-overlay" id="pdfOverlay"></div>
+    <div class="pdf-modal-container">
+      <div class="pdf-modal-header">
+        <div class="pdf-modal-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <span data-i18n="pdf.title">Neptune 功能说明文档</span>
+        </div>
+        <div class="pdf-modal-actions">
+          <a href="#" id="pdfOpenNew" class="pdf-modal-btn" target="_blank" rel="noopener" title="在新标签页打开">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <button class="pdf-modal-btn" id="pdfClose" aria-label="关闭" title="关闭">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="pdf-modal-body">
+        <iframe id="pdfFrame" src="" title="PDF 文档预览" allow="fullscreen"></iframe>
+        <div class="pdf-loading" id="pdfLoading">
+          <div class="pdf-loading-spinner"></div>
+          <span data-i18n="pdf.loading">文档加载中...</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- 返回顶部 -->
   <button class="back-top" id="backTop" aria-label="返回顶部">

@@ -278,6 +278,63 @@
   }
 
   /* ============================================================
+     九、PDF 文档在线预览模态框
+     ============================================================ */
+  function initPdfModal() {
+    const modal = document.getElementById("pdfModal");
+    const overlay = document.getElementById("pdfOverlay");
+    const closeBtn = document.getElementById("pdfClose");
+    const frame = document.getElementById("pdfFrame");
+    const openNew = document.getElementById("pdfOpenNew");
+    const loading = document.getElementById("pdfLoading");
+    if (!modal || !frame) return;
+
+    /* 打开模态框 */
+    function openPdf(pdfSrc) {
+      frame.src = pdfSrc;
+      if (openNew) openNew.setAttribute("href", pdfSrc);
+      if (loading) loading.classList.remove("hidden");
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("pdf-modal-open");
+    }
+
+    /* 关闭模态框 */
+    function closePdf() {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("pdf-modal-open");
+      /* 延迟清空 src 释放资源 */
+      setTimeout(function () { frame.src = ""; }, 300);
+    }
+
+    /* 拦截所有 .doc-link 链接的点击 */
+    document.querySelectorAll(".doc-link").forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+        if (href) openPdf(href);
+      });
+    });
+
+    /* 关闭事件 */
+    if (closeBtn) closeBtn.addEventListener("click", closePdf);
+    if (overlay) overlay.addEventListener("click", closePdf);
+
+    /* ESC 键关闭 */
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal.classList.contains("open")) {
+        closePdf();
+      }
+    });
+
+    /* iframe 加载完成后隐藏 loading */
+    frame.addEventListener("load", function () {
+      if (loading) loading.classList.add("hidden");
+    });
+  }
+
+  /* ============================================================
      初始化
      ============================================================ */
   document.addEventListener("DOMContentLoaded", function () {
@@ -288,6 +345,7 @@
     initBackTop();
     initSmoothScroll();
     initLangButtons();
+    initPdfModal();
 
     /* 首次应用语言 */
     applyLanguage(currentLang);

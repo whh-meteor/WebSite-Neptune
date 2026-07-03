@@ -169,7 +169,11 @@ const I18N = {
     "footer.link.github": "主站",
     "footer.link.contact": "联系我们",
     "footer.copyright": "© 2026 Neptune. 保留所有权利。",
-    "footer.icp": "基于 GIS 构建",
+    "footer.icp": "基于 QGIS 构建",
+
+    /* ---- PDF 预览 ---- */
+    "pdf.title": "Neptune 功能说明文档",
+    "pdf.loading": "文档加载中...",
   },
 
   "en": {
@@ -337,7 +341,11 @@ const I18N = {
     "footer.link.github": "MainStation",
     "footer.link.contact": "Contact",
     "footer.copyright": "© 2026 Neptune. All rights reserved.",
-    "footer.icp": "Built on GIS",
+    "footer.icp": "Built on QGIS",
+
+    /* ---- PDF 预览 ---- */
+    "pdf.title": "Neptune Feature Documentation",
+    "pdf.loading": "Loading document...",
   }
 };
 

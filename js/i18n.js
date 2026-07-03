@@ -114,7 +114,7 @@ const I18N = {
     /* ---- 气象模式 ---- */
     "weather.eyebrow": "气象数据",
     "weather.title": "支持 20+ 种全球气象模式",
-    "weather.desc": "集成 Herbie 工具，覆盖 NOAA 区域与全球模型、ECMWF 及其他国际主流气象预报模式，支持自定义日期、时次、预报时效与变量批量下载。",
+    "weather.desc": "集成 气象数据 工具，覆盖 NOAA 区域与全球模型、ECMWF 及其他国际主流气象预报模式，支持自定义日期、时次、预报时效与变量批量下载。",
     "weather.tab1": "NOAA 区域模型",
     "weather.tab2": "NOAA 全球模型",
     "weather.tab3": "ECMWF 模型",
@@ -216,7 +216,7 @@ const I18N = {
     "features.f3.title": "Full NetCDF Stack",
     "features.f3.desc": "Supports mesh, depth, hydrodynamics, pollutants, particle tracking, and suspended sediment visualization with animation.",
     "features.f4.title": "Global Weather Data",
-    "features.f4.desc": "Integrated with Herbie to download GRIB2 data from 20+ global models including NOAA and ECMWF.",
+    "features.f4.desc": "Integrated with Weather Tools  to download GRIB2 data from 20+ global models including NOAA and ECMWF.",
 
     /* ---- 功能模块 ---- */
     "modules.eyebrow": "Modules",
@@ -286,7 +286,7 @@ const I18N = {
     /* ---- 气象模式 ---- */
     "weather.eyebrow": "Weather Data",
     "weather.title": "Supporting 20+ Global Meteorological Models",
-    "weather.desc": "Integrated with Herbie, covering NOAA regional & global models, ECMWF, and other major international forecast models. Supports custom date, cycle, forecast lead time, and batch variable download.",
+    "weather.desc": "Integrated with  Weather Tools , covering NOAA regional & global models, ECMWF, and other major international forecast models. Supports custom date, cycle, forecast lead time, and batch variable download.",
     "weather.tab1": "NOAA Regional",
     "weather.tab2": "NOAA Global",
     "weather.tab3": "ECMWF",

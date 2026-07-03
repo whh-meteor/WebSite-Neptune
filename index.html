@@ -8,7 +8,7 @@
   <!-- ==================== 基础 SEO Meta ==================== -->
   <title>Neptune - 海洋环境数据处理与模拟工具 | Marine Environment Data Processing Tool</title>
   <meta name="description" content="Neptune 是一款海洋环境数据处理与模拟工具，提供网格处理、岸线处理、水深处理、NetCDF 数据解析、气象数据下载等功能，适用于海洋环境数值模拟的前后处理工作。">
-  <meta name="keywords" content="Neptune, 海洋数据处理, 海洋数值模拟, 网格生成, 近岸加密, NetCDF, FVCOM, 气象数据下载, Herbie, 水动力, 污染物, 粒子追踪, 悬浮沙, marine data, ocean simulation, mesh generation, weather download">
+  <meta name="keywords" content="Neptune, 海洋数据处理, 海洋数值模拟, 网格生成, 近岸加密, NetCDF, FVCOM, 气象数据下载, 水动力, 污染物, 粒子追踪, 悬浮沙, marine data, ocean simulation, mesh generation, weather download">
   <meta name="author" content="Neptune Team">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#0A1929">
@@ -81,7 +81,7 @@
       "NumPy",
       "SciPy",
       "NetCDF4",
-      "Herbie"
+      "Weather"
     ],
     "programmingLanguage": "Python",
     "inLanguage": ["zh-CN", "en"],
@@ -257,7 +257,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 1 0 0-9h-1.8A7 7 0 1 0 4 15.3"/><line x1="12" y1="2" x2="12" y2="2"/><path d="M8 19h5"/></svg>
           </div>
           <h3 data-i18n="features.f4.title">全球气象数据</h3>
-          <p data-i18n="features.f4.desc">集成 Herbie，一键下载 NOAA、ECMWF 等 20 余种全球气象模式 GRIB2 数据。</p>
+          <p data-i18n="features.f4.desc">集成数据，一键下载 NOAA、ECMWF 等 20 余种全球气象模式 GRIB2 数据。</p>
         </div>
       </div>
     </div>
@@ -424,6 +424,123 @@
   </section>
 
   <!-- ============================================================
+       FVCOM 模拟介绍
+       ============================================================ -->
+  <section class="section fvcom-section" id="fvcom">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow" data-i18n="fvcom.eyebrow">海洋数值模拟</span>
+        <h2 data-i18n="fvcom.title">支持 FVCOM 5.1.0 全流程模拟</h2>
+        <p data-i18n="fvcom.desc">Neptune 为 FVCOM 5.1.0 在 Windows 环境下的运行提供完整的前后处理支持，从网格生成到结果可视化，一站式覆盖海洋数值模拟全流程。</p>
+      </div>
+
+      <!-- FVCOM 工作流 -->
+      <div class="fvcom-flow reveal">
+        <div class="fvcom-flow-card">
+          <div class="ff-num">01</div>
+          <div class="ff-body">
+            <h4 data-i18n="fvcom.step1.title">前处理 · 网格与地形</h4>
+            <p data-i18n="fvcom.step1.desc">使用 Neptune 的网格模块生成非结构化三角网格，进行近岸加密与质量检查；通过水深模块完成离散水深点的插值，生成模型所需的水深场。</p>
+          </div>
+        </div>
+        <div class="fvcom-flow-line"></div>
+        <div class="fvcom-flow-card">
+          <div class="ff-num">02</div>
+          <div class="ff-body">
+            <h4 data-i18n="fvcom.step2.title">前处理 · 气象强迫</h4>
+            <p data-i18n="fvcom.step2.desc">通过气象模块下载 NOAA、ECMWF 等 20+ 全球气象模式的 GRIB2 数据，提取风场、气压、温度等强迫场，为 FVCOM 提供驱动输入。</p>
+          </div>
+        </div>
+        <div class="fvcom-flow-line"></div>
+        <div class="fvcom-flow-card">
+          <div class="ff-num">03</div>
+          <div class="ff-body">
+            <h4 data-i18n="fvcom.step3.title">模拟运行 · FVCOM 5.1.0</h4>
+            <p data-i18n="fvcom.step3.desc">在 Windows 环境下配置 FVCOM 5.1.0 计算参数，利用非结构化网格有限体积法进行三维水动力、温盐、污染物等过程的数值模拟。</p>
+          </div>
+        </div>
+        <div class="fvcom-flow-line"></div>
+        <div class="fvcom-flow-card">
+          <div class="ff-num">04</div>
+          <div class="ff-body">
+            <h4 data-i18n="fvcom.step4.title">后处理 · 结果可视化</h4>
+            <p data-i18n="fvcom.step4.desc">将 FVCOM 输出的 NetCDF 结果文件加载至 Neptune，解析网格、水深、流场、污染物、粒子追踪、悬浮沙六类数据，进行多维可视化与动画展示。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FVCOM 特性卡片 -->
+      <div class="fvcom-features reveal delay-1">
+        <div class="fvcom-feat">
+          <div class="ff-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/></svg>
+          </div>
+          <h5 data-i18n="fvcom.f1.title">非结构化网格</h5>
+          <p data-i18n="fvcom.f1.desc">三角形网格灵活拟合复杂岸线与局部加密</p>
+        </div>
+        <div class="fvcom-feat">
+          <div class="ff-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M2 18c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M2 6c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/></svg>
+          </div>
+          <h5 data-i18n="fvcom.f2.title">有限体积法</h5>
+          <p data-i18n="fvcom.f2.desc">通量守恒计算，保证质量与动量精确守恒</p>
+        </div>
+        <div class="fvcom-feat">
+          <div class="ff-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h5 data-i18n="fvcom.f3.title">Windows 原生支持</h5>
+          <p data-i18n="fvcom.f3.desc">无需 Linux 虚拟机，Windows 环境直接运行</p>
+        </div>
+        <div class="fvcom-feat">
+          <div class="ff-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h5 data-i18n="fvcom.f4.title">三维原始方程</h5>
+          <p data-i18n="fvcom.f4.desc">σ 坐标系三维计算，拟合底边界地形</p>
+        </div>
+        <div class="fvcom-feat">
+          <div class="ff-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h5 data-i18n="fvcom.f5.title">干湿判别</h5>
+          <p data-i18n="fvcom.f5.desc">自动处理潮滩动边界，模拟潮间带过程</p>
+        </div>
+        <div class="fvcom-feat">
+          <div class="ff-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 1 0 0-9h-1.8A7 7 0 1 0 4 15.3"/></svg>
+          </div>
+          <h5 data-i18n="fvcom.f6.title">多过程耦合</h5>
+          <p data-i18n="fvcom.f6.desc">水动力、温盐、污染物、泥沙、波浪耦合</p>
+        </div>
+      </div>
+
+      <!-- 应用场景 -->
+      <div class="fvcom-scenarios reveal delay-2">
+        <h3 class="fvcom-scenarios-title" data-i18n="fvcom.scenarios.title">典型应用场景</h3>
+        <div class="fvcom-scenario-grid">
+          <div class="fvcom-scenario">
+            <span class="fs-tag" data-i18n="fvcom.sc1.tag">水动力</span>
+            <p data-i18n="fvcom.sc1.desc">潮流、潮汐、环流的三维流场模拟与分析</p>
+          </div>
+          <div class="fvcom-scenario">
+            <span class="fs-tag" data-i18n="fvcom.sc2.tag">温盐扩散</span>
+            <p data-i18n="fvcom.sc2.desc">河口淡水混合、热扩散、盐度输运过程</p>
+          </div>
+          <div class="fvcom-scenario">
+            <span class="fs-tag" data-i18n="fvcom.sc3.tag">污染物</span>
+            <p data-i18n="fvcom.sc3.desc">溢油扩散、排放口浓度场、污染物传输轨迹</p>
+          </div>
+          <div class="fvcom-scenario">
+            <span class="fs-tag" data-i18n="fvcom.sc4.tag">泥沙</span>
+            <p data-i18n="fvcom.sc4.desc">悬浮沙输运、底沙冲淤、海岸演变模拟</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        气象模式
        ============================================================ -->
   <section class="section" id="weather">
@@ -431,7 +548,7 @@
       <div class="section-head reveal">
         <span class="eyebrow" data-i18n="weather.eyebrow">气象数据</span>
         <h2 data-i18n="weather.title">支持 20+ 种全球气象模式</h2>
-        <p data-i18n="weather.desc">集成 Herbie 工具，覆盖 NOAA 区域与全球模型、ECMWF 及其他国际主流气象预报模式，支持自定义日期、时次、预报时效与变量批量下载。</p>
+        <p data-i18n="weather.desc">集成 气象数据 工具，覆盖 NOAA 区域与全球模型、ECMWF 及其他国际主流气象预报模式，支持自定义日期、时次、预报时效与变量批量下载。</p>
       </div>
 
       <div class="weather-tabs reveal">
@@ -500,7 +617,7 @@
         </div>
         <div class="tech-item reveal delay-4">
           <div class="t-icon">H</div>
-          <div class="t-name">Herbie</div>
+          <div class="t-name">Weather</div>
           <div class="t-desc" data-i18n="tech.herbie.desc">气象数据下载</div>
         </div>
       </div>

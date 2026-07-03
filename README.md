@@ -265,7 +265,6 @@ Sitemap: https://cupgis.cn/sitemap.xml
 
 - **Neptune 官网**：[cupgis.cn](https://cupgis.cn)
 - **QGIS 官网**：[qgis.org](https://qgis.org)
-- **Herbie 文档**：[herbie-data](https://herbie.readthedocs.io/)
 
 ---
 

@@ -1562,6 +1562,10 @@ body.pdf-modal-open {
 
   /* Hero */
   .hero { min-height: auto; padding: calc(var(--header-h) + 40px) 0 60px; }
+  .hero-content { margin-left: 0; max-width: 100%; }
+  .hero h1 { font-size: clamp(1.8rem, 8vw, 2.4rem); flex-direction: column; gap: 4px 0; }
+  .hero h1 .grad { font-size: 0.55em; }
+  .hero .hero-desc { font-size: 1rem; }
   .hero-stats { gap: 28px; }
   .hero-stat .num { font-size: 1.6rem; }
   .scroll-hint { display: none; }
@@ -1626,7 +1630,13 @@ body.pdf-modal-open {
   .hero-cta .btn { width: 100%; justify-content: center; }
   .nav { padding: 0 18px; }
   .lang-toggle button { padding: 4px 10px; font-size: 0.78rem; }
-  .hero h1 { font-size: 2rem; }
+  .hero h1 { font-size: 1.75rem; }
+  .hero h1 .grad { font-size: 0.5em; }
+  .hero .hero-desc { font-size: 0.92rem; line-height: 1.7; }
+  .hero-stats { gap: 20px; }
+  .hero-stat .num { font-size: 1.4rem; }
+  .hero-stat .label { font-size: 0.78rem; }
+  .hero-badge { font-size: 0.76rem; padding: 5px 14px; }
   .module-card { padding: 24px 20px; }
 }
 

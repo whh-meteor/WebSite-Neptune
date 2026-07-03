@@ -1,0 +1,17 @@
+# Neptune 官方网站 - robots.txt
+# 指导搜索引擎爬虫抓取行为
+
+# 允许所有搜索引擎爬虫
+User-agent: *
+
+# 允许抓取所有内容
+Allow: /
+
+# 禁止抓取的路径（如有需要可添加）
+# Disallow: /private/
+
+# 网站地图位置
+Sitemap: https://cupgis.cn/sitemap.xml
+
+# 爬取延迟（秒），可选
+Crawl-delay: 1

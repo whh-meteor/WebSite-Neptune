@@ -218,7 +218,7 @@ Sitemap: https://cupgis.cn/sitemap.xml
 
 ### 修改版本号
 
-全局搜索 `v1.3.2` 替换为新版本号（涉及 `index.html` 与 `js/i18n.js`）。
+全局搜索 `v1.3.3` 替换为新版本号（涉及 `index.html` 与 `js/i18n.js`）。
 
 ## 浏览器兼容性
 

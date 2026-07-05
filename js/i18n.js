@@ -19,7 +19,7 @@ const I18N = {
     "nav.ghTitle": "主站",
 
     /* ---- Hero ---- */
-    "hero.badge": "版本发布 · v1.3.2",
+    "hero.badge": "测试版本发布 · v1.3.3",
     "hero.title": "Neptune",
     "hero.titleSub": "海洋环境数据处理与模拟工具",
     "hero.desc": "一款专为海洋数值模拟打造的专业桌面工具，集成网格处理、岸线与水深分析、NetCDF 模型结果可视化、全球气象数据下载等核心能力，让海洋环境数据的处理高效而精准。",
@@ -184,7 +184,7 @@ const I18N = {
     "download.cardNote": "推荐 8GB 以上内存，独立显卡可获得更佳渲染效果",
     "download.btnDownload": "下载安装包",
     "download.btnSource": "查看源码",
-    "download.value.version": "v1.3.2",
+    "download.value.version": "v1.3.3",
     "download.value.platform": "Windows 64 位",
     "download.value.size": "约 280 MB",
     "download.value.license": "待定",
@@ -226,7 +226,7 @@ const I18N = {
     "nav.ghTitle": "Main Station",
 
     /* ---- Hero ---- */
-    "hero.badge": "Published version · v1.3.2",
+    "hero.badge": "Published version · v1.3.3",
     "hero.title": "Neptune",
     "hero.titleSub": "Marine Environment Data Processing & Simulation Tool",
     "hero.desc": "A professional desktop tool built for ocean numerical simulation, integrating mesh processing, coastline & bathymetry analysis, NetCDF model result visualization, and global meteorological data download — making marine data workflows efficient and precise.",
@@ -391,7 +391,7 @@ const I18N = {
     "download.cardNote": "8GB+ RAM recommended; dedicated GPU provides better rendering performance",
     "download.btnDownload": "Download Installer",
     "download.btnSource": "View Source",
-    "download.value.version": "v1.3.2",
+    "download.value.version": "v1.3.3",
     "download.value.platform": "Windows 64-bit",
     "download.value.size": "~280 MB",
     "download.value.license": "TBD",

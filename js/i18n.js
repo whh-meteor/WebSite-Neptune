@@ -204,7 +204,7 @@ const I18N = {
     "footer.link.github": "主站",
     "footer.link.contact": "联系我们",
     "footer.copyright": "© 2026 Neptune. 保留所有权利。",
-    "footer.icp": "意见与建议:martleth@163.com",
+    "footer.icp": "意见与建议 Email：<martleth@163.com>",
 
     /* ---- PDF 预览 ---- */
     "pdf.title": "Neptune 功能说明文档",

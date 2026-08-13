@@ -194,7 +194,7 @@ const I18N = {
     "download.btnSource": "查看源码",
     "download.value.version": "v1.3.7",
     "download.value.platform": "Windows 64 位",
-    "download.value.size": "约 247 MiB",
+    "download.value.size": " 247 MiB",
     "download.value.license": "待定",
 
     /* ---- 页脚 ---- */

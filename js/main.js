@@ -77,8 +77,8 @@
 
   function updateMetaLanguage(lang) {
     /* 根据语言更新 meta description / title 以辅助 SEO */
-    const descZh = "Neptune 是一款海洋环境数据处理与模拟工具，提供网格处理、岸线处理、水深处理、NetCDF 数据解析、气象数据下载等功能。";
-    const descEn = "Neptune is a  marine environment data processing and simulation tool, offering mesh processing, coastline & bathymetry analysis, NetCDF visualization, and meteorological data download.";
+    const descZh = "Neptune 1.3.7 是一款基于 QGIS 的海洋环境数据处理与模拟工具，提供完整网格与岸线工作流、NetCDF/FVCOM、19 种气象模式和 DeepSeek AI 助手。";
+    const descEn = "Neptune 1.3.7 is a QGIS-based marine data processing and simulation tool with mesh and coastline workflows, NetCDF/FVCOM, 19 weather models, and a DeepSeek AI assistant.";
     const descEl = document.querySelector('meta[name="description"]');
     if (descEl) {
       descEl.setAttribute("content", lang === "zh-CN" ? descZh : descEn);

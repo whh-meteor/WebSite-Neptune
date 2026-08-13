@@ -19,16 +19,16 @@ const I18N = {
     "nav.ghTitle": "主站",
 
     /* ---- Hero ---- */
-    "hero.badge": "测试版本发布 · v1.3.3",
+    "hero.badge": "测试版本发布 · v1.3.7",
     "hero.title": "Neptune",
     "hero.titleSub": "海洋环境数据处理与模拟工具",
-    "hero.desc": "一款专为海洋数值模拟打造的专业桌面工具，集成网格处理、岸线与水深分析、NetCDF 模型结果可视化、全球气象数据下载等核心能力，让海洋环境数据的处理高效而精准。",
+    "hero.desc": "一款基于 QGIS 的海洋数值模拟桌面工具，集成完整网格与岸线工作流、NetCDF/FVCOM、19 种气象模式和可确认的 DeepSeek AI 辅助操作。",
     "hero.btnDownload": "免费下载",
     "hero.btnDocs": "查看文档",
-    "hero.stat1.num": "7",
-    "hero.stat1.label": "功能模块",
-    "hero.stat2.num": "20",
-    "hero.stat2.unit": "+",
+    "hero.stat1.num": "7+1",
+    "hero.stat1.label": "功能区域",
+    "hero.stat2.num": "19",
+    "hero.stat2.unit": "",
     "hero.stat2.label": "气象模式",
     "hero.stat3.num": "6",
     "hero.stat3.label": "NetCDF 可视化",
@@ -39,18 +39,18 @@ const I18N = {
     "features.title": "为海洋数值模拟而生",
     "features.desc": "深度整合 GIS 地理空间能力与海洋专业算法，覆盖从数据获取到结果可视化的完整工作流。",
     "features.f1.title": "GIS 原生驱动",
-    "features.f1.desc": "基于 GIS 与 PyQt5 构建，拥有专业级地图渲染与图层管理能力。",
+    "features.f1.desc": "嵌入 QGIS 地图引擎并使用 PyQt5 构建，提供专业地图渲染、图层管理和坐标转换。",
     "features.f2.title": "海洋专业算法",
-    "features.f2.desc": "内置非结构化网格生成、近岸加密、水深插值等海洋数值模拟核心算法。",
+    "features.f2.desc": "内置非结构化网格生成、中心/近岸加密、质量检查和岸线几何处理。",
     "features.f3.title": "NetCDF 全栈可视化",
     "features.f3.desc": "支持网格、水深、水动力、污染物、粒子追踪、悬浮沙六类结果解析与动画展示。",
     "features.f4.title": "全球气象数据",
-    "features.f4.desc": "集成 Herbie，一键下载 NOAA、ECMWF 等 20 余种全球气象模式 GRIB2 数据。",
+    "features.f4.desc": "通过 Herbie 下载 NOAA、ECMWF 等 19 种模式的 GRIB2 数据，并提供内嵌天气预报。",
 
     /* ---- 功能模块 ---- */
     "modules.eyebrow": "功能模块",
-    "modules.title": "七大模块 · 覆盖完整工作流",
-    "modules.desc": "Ribbon 风格界面，按海洋数据处理流程划分功能模块，操作清晰高效。",
+    "modules.title": "七大业务模块 + AI 助手",
+    "modules.desc": "Ribbon 按业务流程组织功能，右侧 AI 面板提供对话、工程查询和需确认的软件操作。",
 
     "mod1.num": "模块一",
     "mod1.title": "开始",
@@ -79,12 +79,12 @@ const I18N = {
     "mod3.desc": "海岸线数据的生成、编辑、合并与简化处理。",
     "mod3.f1": "岸线生成",
     "mod3.f2": "岸线编辑",
-    "mod3.f3": "合并岸线",
-    "mod3.f4": "抽稀岸线",
+    "mod3.f3": "选择与合并岸线",
+    "mod3.f4": "等间距抽稀",
 
     "mod4.num": "模块四",
     "mod4.title": "水深",
-    "mod4.desc": "离散水深点的插值与编辑，生成水深场。",
+    "mod4.desc": "独立水深处理入口已预留，1.3.7 尚未接入处理逻辑。",
     "mod4.f1": "水深插值",
     "mod4.f2": "水深编辑",
 
@@ -108,14 +108,22 @@ const I18N = {
 
     "mod7.num": "模块七",
     "mod7.title": "设置",
-    "mod7.desc": "系统主题与界面个性化配置。",
-    "mod7.f1": "深色/浅色主题",
+    "mod7.desc": "6 套主题与界面个性化配置；语言入口仍为预留。",
+    "mod7.f1": "6 套内置主题",
     "mod7.f2": "语言切换",
+
+    "mod8.num": "独立能力区",
+    "mod8.title": "DeepSeek AI 助手",
+    "mod8.desc": "右侧可隐藏对话面板，通过 LangChain 连接 DeepSeek，并以白名单和确认框保护软件操作。",
+    "mod8.f1": "deepseek-chat / reasoner",
+    "mod8.f2": "Key 保存、脱敏显示与删除",
+    "mod8.f3": "16 项地图/网格/岸线工具",
+    "mod8.f4": "非只读操作逐项确认",
 
     /* ---- 气象模式 ---- */
     "weather.eyebrow": "气象数据",
-    "weather.title": "支持 20+ 种全球气象模式",
-    "weather.desc": "集成 Herbie 工具，覆盖 NOAA 区域与全球模型、ECMWF 及其他国际主流气象预报模式，支持自定义日期、时次、预报时效与变量批量下载。",
+    "weather.title": "支持 19 种气象模式",
+    "weather.desc": "集成 Herbie，覆盖 NOAA 区域与全球模型、ECMWF 及其他国际模式，支持自定义日期、时次、预报时效与变量批量下载。",
     "weather.tab1": "NOAA 区域模型",
     "weather.tab2": "NOAA 全球模型",
     "weather.tab3": "ECMWF 模型",
@@ -127,12 +135,12 @@ const I18N = {
 
     /* ---- FVCOM 模拟 ---- */
     "fvcom.eyebrow": "海洋数值模拟",
-    "fvcom.title": "支持 FVCOM 5.1.0 全流程模拟",
-    "fvcom.desc": "Neptune 为 FVCOM 5.1.0 在 Windows 环境下的运行提供完整的前后处理支持，从网格生成到结果可视化，一站式覆盖海洋数值模拟全流程。",
+    "fvcom.title": "FVCOM 5.1.0 运行与前后处理",
+    "fvcom.desc": "Neptune 集成网格前处理、Windows 便携运行与 NetCDF 结果可视化，为 FVCOM 5.1.0 提供连贯的建模辅助流程。",
     "fvcom.step1.title": "前处理 · 网格与地形",
-    "fvcom.step1.desc": "使用 Neptune 的网格模块生成非结构化三角网格，进行近岸加密与质量检查；通过水深模块完成离散水深点的插值，生成模型所需的水深场。",
+    "fvcom.step1.desc": "使用网格模块生成非结构化三角网格，执行近岸加密与质量检查。1.3.7 的独立水深插值入口仍为预留能力，模型水深场需在外部准备后导入。",
     "fvcom.step2.title": "前处理 · 气象强迫",
-    "fvcom.step2.desc": "通过气象模块下载 NOAA、ECMWF 等 20+ 全球气象模式的 GRIB2 数据，提取风场、气压、温度等强迫场，为 FVCOM 提供驱动输入。",
+    "fvcom.step2.desc": "通过气象模块下载 NOAA、ECMWF 等 19 种气象模式的 GRIB2 数据，提取风场、气压、温度等强迫场，为 FVCOM 提供驱动输入。",
     "fvcom.step3.title": "模拟运行 · FVCOM 5.1.0",
     "fvcom.step3.desc": "在 Windows 环境下配置 FVCOM 5.1.0 计算参数，利用非结构化网格有限体积法进行三维水动力、温盐、污染物等过程的数值模拟。",
     "fvcom.step4.title": "后处理 · 结果可视化",
@@ -184,9 +192,9 @@ const I18N = {
     "download.cardNote": "推荐 8GB 以上内存，独立显卡可获得更佳渲染效果",
     "download.btnDownload": "下载安装包",
     "download.btnSource": "查看源码",
-    "download.value.version": "v1.3.3",
+    "download.value.version": "v1.3.7",
     "download.value.platform": "Windows 64 位",
-    "download.value.size": "约 280 MB",
+    "download.value.size": "约 247 MiB",
     "download.value.license": "待定",
 
     /* ---- 页脚 ---- */
@@ -207,7 +215,7 @@ const I18N = {
     "footer.icp": "意见与建议 Email：<martleth@163.com>",
 
     /* ---- PDF 预览 ---- */
-    "pdf.title": "Neptune 功能说明文档",
+    "pdf.title": "Neptune 1.3.7 功能说明文档",
     "pdf.loading": "文档加载中...",
   },
 
@@ -226,16 +234,16 @@ const I18N = {
     "nav.ghTitle": "Main Station",
 
     /* ---- Hero ---- */
-    "hero.badge": "Published version · v1.3.3",
+    "hero.badge": "Test release · v1.3.7",
     "hero.title": "Neptune",
     "hero.titleSub": "Marine Environment Data Processing & Simulation Tool",
-    "hero.desc": "A professional desktop tool built for ocean numerical simulation, integrating mesh processing, coastline & bathymetry analysis, NetCDF model result visualization, and global meteorological data download — making marine data workflows efficient and precise.",
+    "hero.desc": "A QGIS-based desktop tool for ocean numerical modelling, combining complete mesh and coastline workflows, NetCDF/FVCOM, 19 weather models, and confirmation-gated DeepSeek assistance.",
     "hero.btnDownload": "Download Free",
     "hero.btnDocs": "View Docs",
-    "hero.stat1.num": "7",
-    "hero.stat1.label": "Modules",
-    "hero.stat2.num": "20",
-    "hero.stat2.unit": "+",
+    "hero.stat1.num": "7+1",
+    "hero.stat1.label": "Work Areas",
+    "hero.stat2.num": "19",
+    "hero.stat2.unit": "",
     "hero.stat2.label": "Weather Models",
     "hero.stat3.num": "6",
     "hero.stat3.label": "NetCDF Visualizations",
@@ -246,18 +254,18 @@ const I18N = {
     "features.title": "Built for Ocean Numerical Simulation",
     "features.desc": "Deeply integrating GIS geospatial capabilities with marine-specific algorithms, covering the complete workflow from data acquisition to result visualization.",
     "features.f1.title": "GIS Native Engine",
-    "features.f1.desc": "Built on GIS  and PyQt5, delivering professional-grade map rendering and layer management.",
+    "features.f1.desc": "Embeds the QGIS map engine in PyQt5 for professional rendering, layer management, and coordinate transforms.",
     "features.f2.title": "Marine Algorithms",
-    "features.f2.desc": "Built-in unstructured mesh generation, nearshore refinement, and bathymetry interpolation core algorithms.",
+    "features.f2.desc": "Built-in unstructured mesh generation, center and nearshore refinement, quality checks, and coastline geometry tools.",
     "features.f3.title": "Full NetCDF Stack",
     "features.f3.desc": "Supports mesh, depth, hydrodynamics, pollutants, particle tracking, and suspended sediment visualization with animation.",
     "features.f4.title": "Global Weather Data",
-    "features.f4.desc": "Integrated with Weather Tools  to download GRIB2 data from 20+ global models including NOAA and ECMWF.",
+    "features.f4.desc": "Uses Herbie to download GRIB2 data from 19 NOAA, ECMWF, and international models, with an embedded forecast view.",
 
     /* ---- 功能模块 ---- */
     "modules.eyebrow": "Modules",
-    "modules.title": "Seven Modules · Complete Workflow",
-    "modules.desc": "Ribbon-style interface organized by marine data processing flow for clear and efficient operation.",
+    "modules.title": "Seven Business Modules + AI Assistant",
+    "modules.desc": "The Ribbon follows the processing workflow, while the right-side AI panel offers chat, project queries, and confirmation-gated actions.",
 
     "mod1.num": "Module 1",
     "mod1.title": "Start",
@@ -286,12 +294,12 @@ const I18N = {
     "mod3.desc": "Generation, editing, merging, and simplification of coastline data.",
     "mod3.f1": "Coastline Generation",
     "mod3.f2": "Coastline Editing",
-    "mod3.f3": "Merge Coastlines",
-    "mod3.f4": "Simplify Coastline",
+    "mod3.f3": "Select & Merge Coastlines",
+    "mod3.f4": "Equal-spacing Resampling",
 
     "mod4.num": "Module 4",
     "mod4.title": "Bathymetry",
-    "mod4.desc": "Interpolation and editing of discrete depth points to generate bathymetry fields.",
+    "mod4.desc": "Standalone bathymetry processing entry points are reserved; processing logic is not connected in v1.3.7.",
     "mod4.f1": "Depth Interpolation",
     "mod4.f2": "Depth Editing",
 
@@ -315,14 +323,22 @@ const I18N = {
 
     "mod7.num": "Module 7",
     "mod7.title": "Settings",
-    "mod7.desc": "System theme and interface personalization.",
-    "mod7.f1": "Dark / Light Theme",
+    "mod7.desc": "Six built-in themes and interface personalization; desktop language switching remains reserved.",
+    "mod7.f1": "Six Built-in Themes",
     "mod7.f2": "Language Switching",
+
+    "mod8.num": "Standalone Area",
+    "mod8.title": "DeepSeek AI Assistant",
+    "mod8.desc": "A collapsible right-side panel connecting to DeepSeek through LangChain, protected by a strict allowlist and confirmations.",
+    "mod8.f1": "deepseek-chat / reasoner",
+    "mod8.f2": "Save, mask, and delete the API key",
+    "mod8.f3": "16 map, mesh, and coastline tools",
+    "mod8.f4": "Confirmation for every non-read-only action",
 
     /* ---- 气象模式 ---- */
     "weather.eyebrow": "Weather Data",
-    "weather.title": "Supporting 20+ Global Meteorological Models",
-    "weather.desc": "Integrated with Herbie, covering NOAA regional & global models, ECMWF, and other major international forecast models. Supports custom date, cycle, forecast lead time, and batch variable download.",
+    "weather.title": "Supporting 19 Weather Models",
+    "weather.desc": "Integrated with Herbie across NOAA regional and global models, ECMWF, and other international models, with custom date, cycle, lead time, and batch variable download.",
     "weather.tab1": "NOAA Regional",
     "weather.tab2": "NOAA Global",
     "weather.tab3": "ECMWF",
@@ -334,12 +350,12 @@ const I18N = {
 
     /* ---- FVCOM 模拟 ---- */
     "fvcom.eyebrow": "Ocean Numerical Simulation",
-    "fvcom.title": "Full-Workflow FVCOM 5.1.0 Simulation Support",
-    "fvcom.desc": "Neptune provides complete pre- and post-processing support for running FVCOM 5.1.0 on Windows — from mesh generation to result visualization, covering the entire ocean numerical simulation workflow.",
+    "fvcom.title": "FVCOM 5.1.0 Runtime and Processing Support",
+    "fvcom.desc": "Neptune combines mesh pre-processing, portable Windows execution, and NetCDF result visualization into a coherent FVCOM 5.1.0 workflow.",
     "fvcom.step1.title": "Pre-processing · Mesh & Topography",
-    "fvcom.step1.desc": "Use Neptune's mesh module to generate unstructured triangular grids with nearshore refinement and quality checks; use the bathymetry module to interpolate discrete depth points into the model's depth field.",
+    "fvcom.step1.desc": "Use the mesh module to generate unstructured triangular grids with nearshore refinement and quality checks. The standalone bathymetry interpolation entry remains reserved in 1.3.7, so model depth fields must be prepared externally and then imported.",
     "fvcom.step2.title": "Pre-processing · Meteorological Forcing",
-    "fvcom.step2.desc": "Download GRIB2 data from 20+ global weather models (NOAA, ECMWF, etc.) via the weather module, extracting wind, pressure, and temperature forcing fields to drive FVCOM.",
+    "fvcom.step2.desc": "Download GRIB2 data from 19 weather models (including NOAA and ECMWF sources) via the weather module, extracting wind, pressure, and temperature forcing fields to drive FVCOM.",
     "fvcom.step3.title": "Simulation · FVCOM 5.1.0",
     "fvcom.step3.desc": "Configure FVCOM 5.1.0 computational parameters in a Windows environment, using the unstructured-grid finite-volume method for 3D hydrodynamic, thermohaline, and pollutant numerical simulation.",
     "fvcom.step4.title": "Post-processing · Visualization",
@@ -391,9 +407,9 @@ const I18N = {
     "download.cardNote": "8GB+ RAM recommended; dedicated GPU provides better rendering performance",
     "download.btnDownload": "Download Installer",
     "download.btnSource": "View Source",
-    "download.value.version": "v1.3.3",
+    "download.value.version": "v1.3.7",
     "download.value.platform": "Windows 64-bit",
-    "download.value.size": "~280 MB",
+    "download.value.size": "~247 MiB",
     "download.value.license": "TBD",
 
     /* ---- 页脚 ---- */
@@ -414,7 +430,7 @@ const I18N = {
     "footer.icp": "Built on QGIS",
 
     /* ---- PDF 预览 ---- */
-    "pdf.title": "Neptune Feature Documentation",
+    "pdf.title": "Neptune 1.3.7 Feature Guide",
     "pdf.loading": "Loading document...",
   }
 };
